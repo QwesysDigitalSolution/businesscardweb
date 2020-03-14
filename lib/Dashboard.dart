@@ -67,7 +67,7 @@ class _DashboardState extends State<Dashboard> {
                   margin: EdgeInsets.only(top: 20),
                   child: Column(
                     children: <Widget>[
-                      Text("Click On The Card To Flip",style: TextStyle(fontSize: 18, color: Colors.grey[600],fontWeight: FontWeight.w600),),
+                      Text("Click On The Card To Flip",style: TextStyle(fontSize: 16, color: Colors.grey[600],fontWeight: FontWeight.w600,letterSpacing: 3,wordSpacing: 2,),),
                       SizedBox(height: 10,),
                       FlipCard(
                         key: cardKey1,
@@ -525,6 +525,40 @@ class _DashboardState extends State<Dashboard> {
                             ),
                           ),
                         ),
+                      ),
+                      SizedBox(height: 10,),
+                      RaisedButton(
+                        padding: EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+                        onPressed: (){
+                        },
+                        color: Colors.orange,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Icon(Icons.cloud_download,color: Colors.white,),
+                            SizedBox(width: 10,),
+                            Text("Save Card To Contact",style: TextStyle(fontSize: 18, color: Colors.white,fontWeight: FontWeight.w600,letterSpacing: 1,wordSpacing: 2,),),
+                          ],
+                        )
+                      ),
+                      SizedBox(height: 50,),
+                      Text("Powerd by Qwesys Digital Solutions",style: TextStyle(fontSize: 18, color: Colors.grey[600],fontWeight: FontWeight.w600,letterSpacing: 3,wordSpacing: 2,),),
+                      SizedBox(height: 10,),
+                      Text("want to create your card",style: TextStyle(fontSize: 16, color: Colors.grey[600],fontWeight: FontWeight.w600,letterSpacing: 3,wordSpacing: 2,),),
+                      SizedBox(height: 10,),
+                      RaisedButton(
+                        padding: EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+                        onPressed: (){
+                          _service.url("https://play.google.com/store/apps?hl=en");
+                        },
+                        color: Colors.orange,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                        ),
+                        child: Text("Signup Now",style: TextStyle(fontSize: 18, color: Colors.white,fontWeight: FontWeight.w600,letterSpacing: 1,wordSpacing: 2,),),
                       ),
                     ],
                   ),
